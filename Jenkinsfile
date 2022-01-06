@@ -18,9 +18,9 @@ pipeline{
     stage("Dev-Deploy"){
       steps{
         sshagent(['Tomcat_server-1']) {
-        sh "scp -o StrictHostKeyChecking=no target/simple-app-3.0.0-SNAPSHOT.war ec2-user@172.31.81.33:/opt/tomcat/webapps/simple-app.war"
-        sh "ssh ec2-user@172.31.81.33 /opt/tomcat/bin/shutdown.sh"
-        sh "ssh ec2-user@172.31.81.33 /opt/tomcat/bin/startup.sh"
+        sh "scp -o StrictHostKeyChecking=no target/simple-app-3.0.0-SNAPSHOT.war ec2-user@172.31.81.33:/opt/tomcat/apache-tomcat-9.0.56/webapps/simple-app.war"
+        sh "ssh ec2-user@172.31.81.33 /opt/tomcat/apache-tomcat-9.0.56/bin/shutdown.sh"
+        sh "ssh ec2-user@172.31.81.33 /opt/tomcat/apache-tomcat-9.0.56/bin/startup.sh"
        }   
     }
   }
