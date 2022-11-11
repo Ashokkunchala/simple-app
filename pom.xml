@@ -17,6 +17,9 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		        
+                        <maven.compiler.source>1.6</maven.compiler.source>
+                        <maven.compiler.target>1.6</maven.compiler.target>
 
 	</dependencies>
 	
